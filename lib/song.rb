@@ -7,11 +7,19 @@ class Song
     
     @@genres = []
     @@artists = []
+<<<<<<< HEAD
    
     
     def initialize(name, artist, genre)
         @@count += 1
         
+=======
+    @@artist_count = {}
+    @genre_count = {}
+    
+    def initialize(name, artist, genre)
+        @@count += 1
+>>>>>>> ff72e1f9dc6cc2f9f86a01c61ff43701c1c49fff
         @@artists << artist
         @@genres << genre
         @name = name
@@ -23,6 +31,7 @@ class Song
     def self.count
         @@count
     end
+<<<<<<< HEAD
 
     def self.genres
         @@genres.uniq
@@ -58,4 +67,23 @@ class Song
         artist_counting
       end 
     
+=======
+
+    def self.genres
+        @@genres.uniq
+    end
+
+    def self.artists
+        @@artists.uniq
+    end
+
+    def self.genre_count
+        genre_count[@genre] = @@genres.uniq
+    end
+
+    def self.artist_count
+        # artist_count = {@@artists => }
+    end
+
+>>>>>>> ff72e1f9dc6cc2f9f86a01c61ff43701c1c49fff
 end
